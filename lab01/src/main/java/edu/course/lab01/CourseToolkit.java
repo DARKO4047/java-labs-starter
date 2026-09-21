@@ -48,7 +48,7 @@ public final class CourseToolkit {
         }
         return true;
 
-    };
+    }
 
 
     public static double average(int[] values) {
@@ -59,7 +59,7 @@ public final class CourseToolkit {
             throw new IllegalArgumentException("Массив не может быть пустым");
         }
         return (double)Arrays.stream(values).sum()/values.length;
-    };
+    }
 
 
     public static int Min(int[] list) {
@@ -79,7 +79,7 @@ public final class CourseToolkit {
             i = i + 1;
         }
     return min;
-    };
+    }
 
     public static int Max(int[] list) {
         if (list == null) {
@@ -98,7 +98,7 @@ public final class CourseToolkit {
             i = i + 1;
         }
         return max;
-    };
+    }
 
 
 }

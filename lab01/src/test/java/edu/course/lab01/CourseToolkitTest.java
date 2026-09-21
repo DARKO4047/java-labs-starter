@@ -83,9 +83,7 @@ class CourseToolkitTest {
     @Test
     void averageThrowsExceptionForEmptyArray() {
         int[] values = new int [0];
-        assertThrows(IllegalArgumentException.class, () -> {
-            CourseToolkit.average(values);
-        });
+        assertThrows(IllegalArgumentException.class, () -> CourseToolkit.average(values));
     }
     @Test
     void minReturnsMinimumInMixedArray() {
