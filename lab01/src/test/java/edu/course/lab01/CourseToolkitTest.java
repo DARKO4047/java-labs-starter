@@ -88,49 +88,35 @@ class CourseToolkitTest {
     @Test
     void minReturnsMinimumInMixedArray() {
         int[] list = {10, -3, 25, 0, -15, 8};
-        int result = CourseToolkit.Min(list);
-        org.junit.jupiter.api.Assertions.assertEquals(-15, result);
+        assertEquals(-15, CourseToolkit.Min(list));
     }
 
     @Test
     void minReturnsElementForSingleElementArray() {
         int[] list = {5};
-        int result = CourseToolkit.Min(list);
-        org.junit.jupiter.api.Assertions.assertEquals(5, result);
+        assertEquals(5, CourseToolkit.Min(list));
     }
 
     @Test
     void minThrowsExceptionForNullArray() {
-        try {
-            CourseToolkit.Min(null);
-            org.junit.jupiter.api.Assertions.fail("Метод должен был выбросить ошибку на null");
-        } catch (IllegalArgumentException e) {
-            org.junit.jupiter.api.Assertions.assertTrue(true);
-        }
+        assertThrows(IllegalArgumentException.class, () -> CourseToolkit.Min(null));
     }
 
     @Test
     void maxReturnsMaximumInMixedArray() {
         int[] list = {10, -3, 25, 0, -15, 8};
-        int result = CourseToolkit.Max(list);
-        org.junit.jupiter.api.Assertions.assertEquals(25, result);
+        assertEquals(25, CourseToolkit.Max(list));
     }
 
     @Test
     void maxReturnsElementForSingleElementArray() {
         int[] list = {-8};
-        int result = CourseToolkit.Max(list);
-        org.junit.jupiter.api.Assertions.assertEquals(-8, result);
+        assertEquals(-8, CourseToolkit.Max(list));
     }
 
     @Test
     void maxThrowsExceptionForEmptyArray() {
         int[] list = new int[0];
-        try {
-            CourseToolkit.Max(list);
-            org.junit.jupiter.api.Assertions.fail("Метод должен был выбросить ошибку на пустой массив");
-        } catch (IllegalArgumentException e) {
-            org.junit.jupiter.api.Assertions.assertTrue(true);
-        }
+        assertThrows(IllegalArgumentException.class, () -> CourseToolkit.Max(list));
     }
 }
