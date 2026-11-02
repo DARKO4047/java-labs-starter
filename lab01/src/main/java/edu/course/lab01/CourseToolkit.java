@@ -88,17 +88,15 @@ public final class CourseToolkit {
         if (list.length == 0) {
             throw new IllegalArgumentException("Массив не может быть пустым");
         }
-        int i = 1;
-        int max = list[0];
+        int i = 0;
+        int max = list[list.length-1];
         while (i < list.length) {
             if (list[i] > max) {
                 max = list[i];
 
             }
-            i = i + 1;
+            i = i + 2;
         }
         return max;
     }
-
-
 }
